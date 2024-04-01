@@ -35,6 +35,15 @@ class Course
         $statement->closeCursor();
     }
 
+    public static function update_course($courseID, $courseName)
+    {
+        $db = Database::getDB();
+        $query = "UPDATE courses SET courseName = :courseName WHERE courseID = :courseID";
 
-
+        $statement = $db->prepare($query);
+        $statement->bindValue(':courseID', $courseID);
+        $statement->bindValue(':courseName', $courseName);
+        $statement->execute();
+        $statement->closeCursor();
+    }
 }
