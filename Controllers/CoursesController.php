@@ -38,5 +38,27 @@ class CoursesController
             }
         }
     }
+    public function updateCourses()
+    {
+        header('Content-Type: application/json');
 
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $data = json_decode(file_get_contents('php://input'), true);
+
+            if (isset($data['courses']) && is_array($data['courses'])) {
+                foreach ($data['courses'] as $course) {
+                    $courseID = filter_var($course['courseID'], FILTER_SANITIZE_NUMBER_INT);
+                    $courseName = isset($course['courseName']) ? trim($course['courseName']) : '';
+                    Course::update_course($courseID, $courseName);
+                }
+                echo json_encode(['message' => 'Courses updated successfully']);
+            } else {
+                http_response_code(400);
+                echo json_encode(['message' => 'Invalid request data.']);
+            }
+        } else {
+            http_response_code(405);
+            echo json_encode(['message' => 'Only POST method is allowed.']);
+        }
+    }
 }
