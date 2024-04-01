@@ -42,5 +42,9 @@ switch ($action) {
         if ($isPost)
             $projectsController->deleteProject();
         break;
-
+    case 'update_courses':
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $coursesController->updateCourses();
+        }
+        break;
 }

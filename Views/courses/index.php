@@ -1,5 +1,9 @@
 <?php include './views/layouts/header.php'; ?>
 
+<button id="editModeToggle" onclick="toggleEditMode()">Edit Mode: Off</button>
+<button id="saveAll" onclick="saveAllChanges()" style="display:none;">Save All</button>
+<button id="cancelEdit" onclick="cancelEditMode()" style="display:none;">Cancel</button>
+
 <section id="course" class="course">
     <h1>Course List</h1>
     <?php if (!empty($courses)): ?>
@@ -12,8 +16,8 @@
             </thead>
             <tbody>
                 <?php foreach ($courses as $course): ?>
-                    <tr class="course__row">
-                        <td>
+                    <tr class="course__row" id="course-<?= htmlspecialchars($course['courseID']) ?>">
+                        <td class="editable" contenteditable="false">
                             <?= htmlspecialchars($course['courseName']) ?>
                         </td>
                         <td>
@@ -46,5 +50,7 @@
 </section>
 
 <p><a href="./?action=list_projects">Manage Projects</a></p>
+
+<script src="./public/js/courses-edit.js"></script>
 
 <?php include './views/layouts/footer.php'; ?>
