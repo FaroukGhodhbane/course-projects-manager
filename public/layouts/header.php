@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class Projects Manager</title>
+    <title>Course Projects Manager</title>
     <link rel="stylesheet" href="view/css/main.min.css">
     <style>
         .bold {
