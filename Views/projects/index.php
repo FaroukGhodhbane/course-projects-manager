@@ -1,4 +1,4 @@
-<?php include './views/layouts/header.php'; ?>
+<?php include './public/layouts/header.php'; ?>
 
 <section id="project" class="project">
     <header>
@@ -97,4 +97,4 @@
 
 <p><a href="./?action=list_courses">Manage Courses</a></p>
 
-<?php include './views/layouts/footer.php'; ?>
+<?php include './public/layouts/footer.php'; ?>
