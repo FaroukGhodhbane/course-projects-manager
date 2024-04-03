@@ -1,6 +1,8 @@
-<?php include './views/layouts/header.php'; ?>
+<?php
+include './public/layouts/header.php';
+?>
 
-<button id="editModeToggle" onclick="toggleEditMode()">Edit Mode: Off</button>
+<button id="editModeToggle" onclick="toggleEditMode()">update courseName</button>
 <button id="saveAll" onclick="saveAllChanges()" style="display:none;">Save All</button>
 <button id="cancelEdit" onclick="cancelEditMode()" style="display:none;">Cancel</button>
 
@@ -53,4 +55,4 @@
 
 <script src="./public/js/courses-edit.js"></script>
 
-<?php include './views/layouts/footer.php'; ?>
+<?php include './public/layouts/footer.php'; ?>
