@@ -3,9 +3,9 @@ let originalTexts = {}; // Object to store original texts
 
 function toggleEditMode() {
   editMode = !editMode;
-  document.getElementById("editModeToggle").textContent = `Edit Mode: ${
-    editMode ? "On" : "Off"
-  }`;
+  document.getElementById(
+    "editModeToggle"
+  ).textContent = `Update Course Names: ${editMode ? "On" : "Off"}`;
   document.getElementById("saveAll").style.display = editMode
     ? "inline-block"
     : "none";
@@ -74,7 +74,7 @@ function cancelEditMode() {
   originalTexts = {};
 
   // Update button visibility and edit mode status
-  document.getElementById("editModeToggle").textContent = "Edit Mode: Off";
+  document.getElementById("editModeToggle").textContent = "Update Course Names";
   document.getElementById("saveAll").style.display = "none";
   document.getElementById("cancelEdit").style.display = "none";
   editMode = false;

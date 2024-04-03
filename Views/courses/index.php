@@ -2,7 +2,7 @@
 include './public/layouts/header.php';
 ?>
 
-<button id="editModeToggle" onclick="toggleEditMode()">update courseName</button>
+<button id="editModeToggle" onclick="toggleEditMode()">Update Course Names</button>
 <button id="saveAll" onclick="saveAllChanges()" style="display:none;">Save All</button>
 <button id="cancelEdit" onclick="cancelEditMode()" style="display:none;">Cancel</button>
 
