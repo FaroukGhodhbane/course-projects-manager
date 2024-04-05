@@ -1,0 +1,42 @@
+.course {
+  margin-bottom: 2rem;
+  &__table {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    font-family: montserrat;
+    th,
+    td {
+      text-align: left;
+      padding: 12px;
+    }
+
+    th {
+      background-color: #7b5c52;
+      color: #fff;
+      font-size: 1.2rem;
+      font-family: verdana, $font-family-base;
+    }
+
+    tbody tr:nth-of-type(odd) {
+      background-color: #fff;
+    }
+    tbody tr:nth-of-type(even) {
+      background-color: #efefef;
+    }
+
+    tbody tr:last-of-type {
+      border-bottom: 2px solid #7b5c52;
+    }
+
+    td:nth-child(1) {
+      font-weight: 700;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+      text-align: center;
+    }
+  }
+}

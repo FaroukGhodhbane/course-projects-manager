@@ -1,14 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import "variables";
+@import "utilities/variables";
+@import "utilities/mixins";
 @import "components/add";
 @import "components/buttons";
 @import "pages/projectsManager";
+@import "pages/coursesManager";
 @import "pages/auth";
 * {
   box-sizing: border-box;
+  font-family: $font-family-base;
 }
 body {
-  background-color: #efefef;
+  background-color: #f7f7f7;
 }
 main {
   max-width: 1080px;

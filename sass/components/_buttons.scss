@@ -1,12 +1,56 @@
-.project__table_deleteButton {
-  background-color: $error-color;
-  color: $odd-row-color;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 5px;
+.course {
+  &__table_deleteButton {
+    background-color: #e51300;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+.project {
+  &__table_deleteButton {
+    background-color: #e51300;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__listCourses_goButton {
+    padding: 0.5rem 1rem;
+    background-color: $secondary-color;
+    font-weight: 700;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 
-  &:hover {
-    opacity: $hover-opacity;
+    &:hover {
+      background-color: lighten($secondary-color, 10%);
+    }
+  }
+}
+
+.add {
+  &__addButton {
+    padding: 0.75rem 1rem;
+    background-color: $add-button-bg-color;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    width: 40%;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: lighten($color: $add-button-bg-color, $amount: 2);
+    }
   }
 }
