@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "variables";
+@import "components/add";
+@import "components/buttons";
+@import "pages/projectsManager";
+@import "pages/auth";
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #efefef;
+}
+main {
+  max-width: 1080px;
+  margin: auto;
+  padding: 20px;
+}

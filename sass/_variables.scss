@@ -1,0 +1,15 @@
+// Define color palette
+$primary-color: #0071eb; // Adjusted to match goButton color
+$secondary-color: #7b5c52; // Used for table header and listCourses_select background
+$highlight-color: #00529b; // Used for borders and course-title background
+$error-color: #e51300; // Used for deleteButton background
+$even-row-color: #c2f7ff; // Used for even table rows
+$odd-row-color: #fff; // Used for odd table rows
+$font-color: #000; // General font color
+$font-family: "Montserrat", sans-serif; // Font family for consistency
+$border-color: #efefef; // Used for table row borders
+
+// Define other reusable styles
+$border-radius: 4px;
+$font-weight-bold: 700; // Used for emphasis
+$hover-opacity: 0.8; // Hover effect for deleteButton

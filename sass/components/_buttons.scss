@@ -1,0 +1,12 @@
+.project__table_deleteButton {
+  background-color: $error-color;
+  color: $odd-row-color;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+
+  &:hover {
+    opacity: $hover-opacity;
+  }
+}

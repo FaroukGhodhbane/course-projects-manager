@@ -1,0 +1,12 @@
+@import "../components/projects";
+.project header {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-size: 2rem;
+    font-family: montserrat;
+    font-weight: 700;
+  }
+}
