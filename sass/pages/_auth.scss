@@ -1,18 +1,21 @@
 /* General Styles */
-h2 {
-  font-size: 2.2rem;
-  font-family: montserrat;
-  font-weight: 700;
-  text-align: center;
-}
-#register h2 {
-  color: $secondary-color;
-}
-#login h2 {
-  color: $primary-color;
+
+//Privacy notice
+.headsup {
+  color: #d71200;
+  font-size: 1.5em;
+  margin-bottom: 30px;
 }
 .auth {
   width: 100%;
+  padding: 50px 20px 0;
+  h2 {
+    font-size: 2rem;
+    font-family: montserrat;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+  }
   p {
     text-align: center;
     margin-top: 2rem;
@@ -21,7 +24,7 @@ h2 {
   /* Form Styles */
   &__form {
     @include flex-column;
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
   }
 
@@ -32,7 +35,7 @@ h2 {
     label {
       display: block;
       margin: 15px 0 $margin-small;
-      color: #030303;
+      color: #000000;
       font-size: 1.5rem;
     }
 
@@ -42,7 +45,7 @@ h2 {
       width: 100%;
       padding: 10px;
       border: none;
-      border-bottom: 2px solid #161616;
+      border-bottom: 2px solid #000000;
       margin-bottom: 20px;
       background-color: transparent;
       font-size: 16px;
@@ -52,7 +55,7 @@ h2 {
     input[type="password"]:focus,
     input[type="email"]:focus {
       outline: none;
-      border-bottom-color: #0056b3;
+      border-bottom-color: $auth-form-border-bottom;
     }
   }
 }

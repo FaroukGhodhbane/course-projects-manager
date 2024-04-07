@@ -3,9 +3,9 @@ let originalTexts = {}; // Object to store original texts
 
 function toggleEditMode() {
   editMode = !editMode;
-  document.getElementById(
-    "editModeToggle"
-  ).textContent = `Update Course Names: ${editMode ? "On" : "Off"}`;
+  document.getElementById("editModeToggle").textContent = `Edit Course Names: ${
+    editMode ? "On" : "Off"
+  }`;
   document.getElementById("saveAll").style.display = editMode
     ? "inline-block"
     : "none";
@@ -15,7 +15,7 @@ function toggleEditMode() {
 
   const editableElements = document.querySelectorAll(".editable");
   editableElements.forEach((element) => {
-    const courseID = element.closest(".course__row").id.split("-")[1];
+    const courseID = element.closest(".course__table_row").id.split("-")[1];
     if (editMode) {
       // Store the original text when entering edit mode
       originalTexts[courseID] = element.innerText;
@@ -29,7 +29,7 @@ function saveAllChanges() {
   const courses = [];
   const editableElements = document.querySelectorAll(".editable");
   editableElements.forEach((element) => {
-    const courseID = element.closest(".course__row").id.split("-")[1];
+    const courseID = element.closest(".course__table_row").id.split("-")[1];
     const courseName = element.innerText;
     courses.push({ courseID, courseName }); // Collect all courses' updated info
   });
@@ -63,7 +63,7 @@ function saveAllChanges() {
 function cancelEditMode() {
   const editableElements = document.querySelectorAll(".editable");
   editableElements.forEach((element) => {
-    const courseID = element.closest(".course__row").id.split("-")[1];
+    const courseID = element.closest(".course__table_row").id.split("-")[1];
     // Revert each element to its original text
     element.innerText = originalTexts[courseID];
     element.contentEditable = false;

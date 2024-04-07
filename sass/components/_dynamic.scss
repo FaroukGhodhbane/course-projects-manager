@@ -1,0 +1,18 @@
+.error {
+  padding-top: 50px;
+  &__message {
+    color: #d71200;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 30px;
+  }
+  &__link {
+    text-align: center;
+  }
+}
+
+// editable course rows
+.is-editing {
+  background-color: #e6e6e6;
+  border: 1px dashed #7b7b7b;
+}

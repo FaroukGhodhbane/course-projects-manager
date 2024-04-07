@@ -1,13 +1,30 @@
 <?php
 include './public/layouts/header.php';
 ?>
+<header>
+    <h1>Course Projects Manager</h1>
+    <nav>
+        <ul>
+            <li><a href="./?action=list_projects">Manage Projects</a></li>
+            <li>
+                <form action="./?action=logout" method="post">
+                    <button type="submit" aria-label="logout" class="logoutButton">Logout</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+</header>
 
-<button id="editModeToggle" onclick="toggleEditMode()">Update Course Names</button>
-<button id="saveAll" onclick="saveAllChanges()" style="display:none;">Save All</button>
-<button id="cancelEdit" onclick="cancelEditMode()" style="display:none;">Cancel</button>
+<div class="editModeButtons">
+    <button class="editModeButtons__edit" id="editModeToggle" onclick="toggleEditMode()">Edit Course Names</button>
+    <button class="editModeButtons__save" id="saveAll" onclick="saveAllChanges()" style="display:none;">Save
+        All</button>
+    <button class="editModeButtons__cancel" id="cancelEdit" onclick="cancelEditMode()"
+        style="display:none;">Cancel</button>
+</div>
 
 <section id="course" class="course">
-    <h1>Course List</h1>
+    <h2>Course List</h2>
     <?php if (!empty($courses)): ?>
         <table class="course__table">
             <thead>
@@ -18,14 +35,14 @@ include './public/layouts/header.php';
             </thead>
             <tbody>
                 <?php foreach ($courses as $course): ?>
-                    <tr class="course__row" id="course-<?= htmlspecialchars($course['courseID']) ?>">
+                    <tr class="course__table_row" id="course-<?= htmlspecialchars($course['courseID']) ?>">
                         <td class="editable" contenteditable="false">
                             <?= htmlspecialchars($course['courseName']) ?>
                         </td>
                         <td>
                             <form action="./?action=delete_course" method="post">
                                 <input type="hidden" name="courseID" value="<?= htmlspecialchars($course['courseID']) ?>">
-                                <button class="course__deleteButton">Delete</button>
+                                <button class="course__table_deleteButton">X</button>
                             </form>
                         </td>
                     </tr>
@@ -37,7 +54,6 @@ include './public/layouts/header.php';
     <?php endif; ?>
 </section>
 
-
 <section id="add" class="add">
     <h2>Add a Course</h2>
     <form action="./?action=add_course" method="post">
@@ -45,13 +61,9 @@ include './public/layouts/header.php';
             <label>Course Name:</label>
             <input type="text" name="courseName" maxlength="50" placeholder="Course Name" required autofocus>
         </div>
-        <div class="add__addButton">
-            <button class="add-button bold">Add</button>
-        </div>
+        <button class="add__addButton">Add</button>
     </form>
 </section>
-
-<p><a href="./?action=list_projects">Manage Projects</a></p>
 
 <script src="./public/js/courses-edit.js"></script>
 

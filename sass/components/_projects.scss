@@ -1,11 +1,12 @@
 .project {
   @include flex-column-center;
   margin-bottom: 1rem;
+  padding: 0 20px;
 
   &__listCourses_select {
     @include flex-center;
     padding: 12px;
-    background-color: $primary-color;
+    background-color: $secondary-color;
     color: #fff;
     width: 80%;
     max-width: 1000px; // Keeps it from getting too wide on larger screens
@@ -30,20 +31,21 @@
   }
 
   &__course_title {
-    background-color: #00529b;
+    background-color: $primary-color;
     color: white;
+    max-width: 900px;
+    margin: 20px auto 0; /* Space before each new course group */
     padding: $course-title-padding;
     font-size: $course-title-font-size;
     font-weight: 700;
-    margin-top: 20px; /* Space before each new course group */
   }
 
   &__table {
     margin: 20px auto;
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
+    line-height: 1.5rem;
     border-collapse: collapse;
-    font-family: montserrat;
     th,
     td {
       text-align: left;
@@ -51,7 +53,7 @@
     }
 
     th {
-      background-color: #7b5c52;
+      background-color: $table-header-bg-color;
       color: #fff;
       font-size: 1.2rem;
       font-family: verdana, $font-family-base;
@@ -65,21 +67,27 @@
     }
 
     tbody tr:last-of-type {
-      border-bottom: 2px solid #7b5c52;
+      border-bottom: $table-last-row-border;
     }
 
+    th:nth-child(1),
     td:nth-child(1) {
-      max-width: 160px; /* Set min-width for the first column */
+      width: 25%;
       font-weight: 700;
+      line-height: 1.5rem;
     }
     th:nth-child(2),
     td:nth-child(2) {
-      max-width: 400px;
-      line-height: 1.5rem;
+      width: 55%;
+    }
+    th:nth-child(3),
+    td:nth-child(3) {
+      width: 13%;
     }
     th:nth-child(4),
     td:nth-child(4) {
       text-align: center;
+      width: 7%;
     }
   }
 }
