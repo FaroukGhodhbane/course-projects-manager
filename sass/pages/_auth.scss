@@ -1,0 +1,58 @@
+/* General Styles */
+h2 {
+  font-size: 2.2rem;
+  font-family: montserrat;
+  font-weight: 700;
+  text-align: center;
+}
+#register h2 {
+  color: $secondary-color;
+}
+#login h2 {
+  color: $primary-color;
+}
+.auth {
+  width: 100%;
+  p {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  /* Form Styles */
+  &__form {
+    @include flex-column;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  &__fields {
+    margin-bottom: 20px;
+    width: 100%;
+
+    label {
+      display: block;
+      margin: 15px 0 $margin-small;
+      color: #030303;
+      font-size: 1.5rem;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-bottom: 2px solid #161616;
+      margin-bottom: 20px;
+      background-color: transparent;
+      font-size: 16px;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="email"]:focus {
+      outline: none;
+      border-bottom-color: #0056b3;
+    }
+  }
+}

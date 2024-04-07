@@ -1,3 +1,35 @@
+.auth {
+  &__loginButton {
+    padding: 0.75rem 1rem;
+    background-color: $primary-color;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    width: 40%;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: lighten($color: $primary-color, $amount: 2);
+    }
+  }
+  &__registerButton {
+    padding: 0.75rem 1rem;
+    background-color: $secondary-color;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    width: 40%;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: lighten($color: $secondary-color, $amount: 2);
+    }
+  }
+}
 .course {
   &__table_deleteButton {
     background-color: #e51300;
