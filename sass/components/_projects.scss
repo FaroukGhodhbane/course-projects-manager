@@ -1,0 +1,93 @@
+.project {
+  @include flex-column-center;
+  margin-bottom: 1rem;
+  padding: 0 20px;
+
+  &__listCourses_select {
+    @include flex-center;
+    padding: 12px;
+    background-color: $secondary-color;
+    color: #fff;
+    width: 80%;
+    max-width: 1000px; // Keeps it from getting too wide on larger screens
+
+    select,
+    .project__listCourses_goButton {
+      margin: 0 $margin-small;
+    }
+
+    select {
+      padding: 0.5rem;
+      background-color: #fff;
+      border: none;
+      color: #000;
+      font-size: 1rem;
+      width: 100%;
+    }
+  }
+
+  &__group {
+    width: 100%;
+  }
+
+  &__course_title {
+    background-color: $primary-color;
+    color: white;
+    max-width: 900px;
+    margin: 20px auto 0; /* Space before each new course group */
+    padding: $course-title-padding;
+    font-size: $course-title-font-size;
+    font-weight: 700;
+  }
+
+  &__table {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 900px;
+    line-height: 1.5rem;
+    border-collapse: collapse;
+    th,
+    td {
+      text-align: left;
+      padding: 12px;
+    }
+
+    th {
+      background-color: $table-header-bg-color;
+      color: #fff;
+      font-size: 1.2rem;
+      font-family: verdana, $font-family-base;
+    }
+
+    tbody tr:nth-of-type(odd) {
+      background-color: #fff;
+    }
+    tbody tr:nth-of-type(even) {
+      background-color: #efefef;
+    }
+
+    tbody tr:last-of-type {
+      border-bottom: $table-last-row-border;
+    }
+
+    th:nth-child(1),
+    td:nth-child(1) {
+      width: 25%;
+      font-weight: 700;
+      line-height: 1.5rem;
+    }
+    th:nth-child(2),
+    td:nth-child(2) {
+      width: 55%;
+    }
+    th:nth-child(3),
+    td:nth-child(3) {
+      width: 13%;
+    }
+    th:nth-child(4),
+    td:nth-child(4) {
+      text-align: center;
+      width: 7%;
+    }
+  }
+}

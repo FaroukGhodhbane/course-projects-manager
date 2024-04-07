@@ -1,0 +1,25 @@
+// Color Palette
+$primary-color: #00529b;
+$secondary-color: #7b5c52;
+$primary-bg-color: #efefef;
+$table-even-row-color: #c2f7ff;
+$table-odd-row-color: #fff;
+$logout-button-bg-color: #2f2f2f;
+$go-button-bg-color: #0071eb;
+$add-button-bg-color: #008826;
+$delete-button-bg-color: #e51300;
+$auth-form-border-bottom: blue;
+
+// Font Settings
+$font-family-base: montserrat, Tahoma, "System UI", "sans-serif";
+
+// Spacing and Layout
+$margin-small: 5px; // Used for small margins around select and buttons
+
+// Table Styles
+$table-header-bg-color: $secondary-color;
+$table-last-row-border: 2px solid $secondary-color;
+
+// Course Title Styles
+$course-title-padding: 10px;
+$course-title-font-size: 1.5rem;

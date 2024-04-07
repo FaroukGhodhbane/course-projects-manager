@@ -1,0 +1,48 @@
+/* General Styles */
+.add {
+  width: 100%;
+
+  h2 {
+    color: $add-button-bg-color;
+    margin: 30px 0 15px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  /* Form Styles */
+  form {
+    @include flex-column;
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  .add__fields {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  label {
+    display: block;
+    margin: 15px 0 $margin-small;
+    color: #000;
+    font-size: 1.7rem;
+  }
+
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #000000;
+    margin-bottom: 20px;
+    background-color: transparent;
+    font-size: 16px;
+  }
+
+  input[type="text"]:focus,
+  select:focus {
+    outline: none;
+    border-bottom-color: #0056b3;
+  }
+}

@@ -9,7 +9,7 @@ class Database
 
     public static function getDB()
     {
-        if (!isset (self::$db)) {
+        if (!isset(self::$db)) {
             try {
                 self::$db = new PDO(self::$dsn, self::$username, self::$password);
             } catch (PDOException $e) {

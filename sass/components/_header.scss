@@ -1,0 +1,35 @@
+header {
+  @include flex-space-between-center;
+  flex-wrap: wrap;
+
+  margin-bottom: 40px;
+  padding: 10px 20px;
+  background-color: #fff;
+  width: 100%;
+
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  nav ul {
+    height: 100%;
+    padding: 0.2rem;
+    @include flex-space-between-center;
+    flex-wrap: wrap;
+
+    li {
+      margin: 0 0.2rem;
+      padding: 0.2rem;
+      display: block;
+      a {
+        &:visited {
+          color: blue;
+        }
+        &:hover {
+          color: green;
+        }
+      }
+    }
+  }
+}
