@@ -45,6 +45,6 @@ Update the database connection details (host, username, password, database name)
 
 5. **Access the Project:**
 
-Open your browser and navigate to http://localhost/course-projects-management-system (adjust the URL based on your project's path within htdocs)
+Open your browser and navigate to localhost/course-projects-manager (adjust the URL based on your project's path within htdocs)
 
 You're in!
