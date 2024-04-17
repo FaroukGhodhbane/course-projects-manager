@@ -1,5 +1,8 @@
 .error {
   padding-top: 50px;
+  &__heading {
+    text-align: center;
+  }
   &__message {
     color: #d71200;
     font-size: 1.5em;
