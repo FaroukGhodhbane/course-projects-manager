@@ -50,7 +50,7 @@ include './public/layouts/header.php';
             </tbody>
         </table>
     <?php else: ?>
-        <p>Start adding courses!</p>
+        <p class="course__start-adding">Start adding courses!</p>
     <?php endif; ?>
 </section>
 
